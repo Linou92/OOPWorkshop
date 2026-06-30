@@ -2,6 +2,7 @@ package se.lexicon;
 
 
 import se.lexicon.OnlineShop.OnlineShopApp;
+import se.lexicon.ParkingLot.ParkingLotApp;
 
 public class Main {
     static void main() {
@@ -18,6 +19,6 @@ public class Main {
                 |               PARKING LOT APP             |
                 =============================================
                 """));
-        //ParkingLotApp.runApp();
+        ParkingLotApp.runApp();
     }
 }
