@@ -16,10 +16,14 @@ public class Bank {
     }
 
     void processAllAccounts(){
-
+        for(Account account:accounts){
+            account.processMonth();
+        }
     }
 
     void printAllSummaries(){
-
+        for(Account account:accounts){
+            account.printSummary();
+        }
     }
 }
