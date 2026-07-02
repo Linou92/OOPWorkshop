@@ -9,9 +9,9 @@ public class CheckingAccount extends Account {
         this.monthlyFee = monthlyFee;
     }
 
+    @Override
     void processMonth(){
-        double balance = getBalance();
         balance -= monthlyFee;
-        IO.println("Holder : " + getHolder() + " monthly fee charged.");
+        IO.println(getHolder() + " monthly fee charged.");
     }
 }

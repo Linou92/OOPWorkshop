@@ -9,9 +9,9 @@ public class LoanAccount extends Account {
         this.loanRate = loanRate;
     }
 
+    @Override
     void processMonth(){
-        double balance = getBalance();
         balance += balance * loanRate;
-        IO.println("Holder : " + getHolder() + " loan interest added.");
+        IO.println(getHolder() + " loan interest added.");
     }
 }

@@ -3,7 +3,7 @@ package se.lexicon.TheBank;
 public abstract class Account {
 
     private String holder;
-    private double balance;
+    protected double balance; // to be able to access it from subclasses
 
     public Account(String holder, double balance) {
         if(holder == null || holder.isBlank() || balance < 0) throw new IllegalArgumentException("Holder name cannot be empty or balance cannot be negative.");
@@ -27,10 +27,6 @@ public abstract class Account {
     abstract void processMonth();
 
     void printSummary(){
-        IO.println(String.format("""
-                ===== Account Summary ====
-                Holder: %s
-                Balance: %.2f Kr
-                """));
+        IO.println(getHolder() + " | Balance: " + getBalance() + " Kr");
     }
 }

@@ -3,6 +3,7 @@ package se.lexicon;
 
 import se.lexicon.OnlineShop.OnlineShopApp;
 import se.lexicon.ParkingLot.ParkingLotApp;
+import se.lexicon.TheBank.BankApp;
 
 public class Main {
     static void main() {
@@ -20,5 +21,12 @@ public class Main {
                 =============================================
                 """));
         ParkingLotApp.runApp();
+
+        IO.println(String.format("""
+                =============================================
+                |               THE BANK APP                |
+                =============================================
+                """));
+        BankApp.runApp();
     }
 }

@@ -1,5 +1,6 @@
 package se.lexicon.TheBank;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
@@ -9,9 +10,10 @@ public class Bank {
 
     public Bank(String name) {
         this.name = name;
+        this.accounts = new ArrayList<>();
     }
 
-    void addAccount(Account account){
+    public void addAccount(Account account){
         accounts.add(account);
     }
 
@@ -22,6 +24,10 @@ public class Bank {
     }
 
     void printAllSummaries(){
+        IO.println(String.format("""
+                %s
+                ===== Account Summary =====
+                """, name));
         for(Account account:accounts){
             account.printSummary();
         }
